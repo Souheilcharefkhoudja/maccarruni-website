@@ -20,7 +20,8 @@ python -m http.server 4173
 | Texts (Italian and English) | `data-it` / `data-en` attributes in `index.html` |
 | Colours and typography | variables at the top of `styles.css` |
 | Background slideshow photos | `.bg__slide` entries in `index.html`, files in `assets/img/` |
-| Hero film | save a clip as `assets/video/hero.mp4`; it replaces the photos in the hero automatically |
+| Hero film | save a clip in `assets/video/` and set `HERO_VIDEO` at the top of `menu-data.js` |
+| Phone layout | the `Phones and small tablets` block at the end of `styles.css` |
 
 ## Before going live
 

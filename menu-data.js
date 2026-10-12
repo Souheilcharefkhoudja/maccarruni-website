@@ -1,5 +1,8 @@
 // Menu transcribed from the printed menu. Edit names, descriptions and prices here; the page rebuilds itself.
 // price: number in euro, a string for special pricing, or null when the printed price could not be read.
+// Hero film: save a clip in assets/video/ and put its path here, e.g. 'assets/video/hero.mp4'. Empty = sliding photos.
+window.HERO_VIDEO = '';
+
 window.MENU = [
   {
     id: 'primi',

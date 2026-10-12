@@ -2,10 +2,13 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <title>Maccarruni — Osteria, Pizzeria, Wine Bar · Catania</title>
 <meta name="description" content="Maccarruni: osteria, pizzeria e wine bar nel cuore di Catania, a 100 metri dal Duomo. Pasta fresca, pesce, carne alla griglia. Aperti tutti i giorni dalle 11:30 alle 2:00.">
 <meta name="theme-color" content="#071530">
+<!-- Concept preview: kept out of search engines until the restaurant approves it. Remove this line at launch. -->
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,12 +18,12 @@
 
 <!-- Fixed photo background that slides on its own; every section sits on top of it. -->
 <div class="bg" aria-hidden="true">
-  <div class="bg__slide" style="--img:url('assets/img/bg-crudo.webp'); --pos:50% 55%"></div>
-  <div class="bg__slide" style="--img:url('assets/img/bg-tagliolini.webp'); --pos:50% 58%"></div>
-  <div class="bg__slide" style="--img:url('assets/img/bg-sala.webp'); --pos:50% 45%"></div>
-  <div class="bg__slide" style="--img:url('assets/img/bg-pasta-sarde.webp'); --pos:50% 50%"></div>
-  <div class="bg__slide" style="--img:url('assets/img/bg-facciata.webp'); --pos:50% 62%"></div>
-  <div class="bg__slide" style="--img:url('assets/img/bg-zuppa-cozze.webp'); --pos:50% 50%"></div>
+  <div class="bg__slide" data-img="crudo" style="--pos:50% 55%; --pos-m:38% 50%"></div>
+  <div class="bg__slide" data-img="tagliolini" style="--pos:50% 58%; --pos-m:50% 50%"></div>
+  <div class="bg__slide" data-img="sala" style="--pos:50% 45%; --pos-m:60% 50%"></div>
+  <div class="bg__slide" data-img="pasta-sarde" style="--pos:50% 50%; --pos-m:42% 50%"></div>
+  <div class="bg__slide" data-img="facciata" style="--pos:50% 62%; --pos-m:50% 60%"></div>
+  <div class="bg__slide" data-img="zuppa-cozze" style="--pos:50% 50%; --pos-m:45% 50%"></div>
   <div class="bg__veil"></div>
   <div class="bg__grain"></div>
 </div>
@@ -36,6 +39,7 @@
     <a href="#recensioni" data-it="Recensioni" data-en="Reviews">Recensioni</a>
     <a href="#galleria" data-it="Galleria" data-en="Gallery">Galleria</a>
     <a href="#contatti" data-it="Dove siamo" data-en="Find us">Dove siamo</a>
+    <a class="nav__call" href="tel:+390958033435"><span data-it="Chiama per prenotare" data-en="Call to book">Chiama per prenotare</span><b>095 803 3435</b></a>
   </nav>
   <div class="nav__side">
     <div class="lang" role="group" aria-label="Lingua / Language">
@@ -50,10 +54,8 @@
 <main id="top">
 
   <section class="hero">
-    <!-- Drop a film at assets/video/hero.mp4 and it plays here in place of the sliding photos. -->
-    <video class="hero__video" id="heroVideo" muted loop playsinline preload="metadata" aria-hidden="true">
-      <source src="assets/video/hero.mp4" type="video/mp4">
-    </video>
+    <!-- Plays in place of the sliding photos once HERO_VIDEO is set in menu-data.js. -->
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"></video>
 
     <div class="hero__grid">
       <div class="hero__main">
@@ -222,7 +224,11 @@
   <p class="foot__small">© <span id="year"></span> Maccarruni</p>
 </footer>
 
-<a class="dock" href="tel:+390958033435"><span data-it="Prenota un tavolo" data-en="Book a table">Prenota un tavolo</span><b>095 803 3435</b></a>
+<nav class="dock" aria-label="Azioni rapide">
+  <a class="dock__call" href="tel:+390958033435"><span data-it="Prenota" data-en="Book">Prenota</span><b>095 803 3435</b></a>
+  <a class="dock__btn" href="#menu" data-it="Menù" data-en="Menu">Menù</a>
+  <a class="dock__btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Maccarruni%20Osteria%20pizzeria%20wine%20bar%20Catania&destination_place_id=ChIJh23XKgDjExMRcpaYPG7wh_U" data-it="Mappa" data-en="Map">Mappa</a>
+</nav>
 
 <script src="menu-data.js"></script>
 <script src="app.js"></script>
