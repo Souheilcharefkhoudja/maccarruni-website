@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maccarruni — Osteria, Pizzeria, Wine Bar · Catania</title>
+<meta name="description" content="Maccarruni: osteria, pizzeria e wine bar nel cuore di Catania, a 100 metri dal Duomo. Pasta fresca, pesce, carne alla griglia. Aperti tutti i giorni dalle 11:30 alle 2:00.">
+<meta name="theme-color" content="#071530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Fixed photo background that slides on its own; every section sits on top of it. -->
+<div class="bg" aria-hidden="true">
+  <div class="bg__slide" style="--img:url('assets/img/bg-crudo.webp'); --pos:50% 55%"></div>
+  <div class="bg__slide" style="--img:url('assets/img/bg-tagliolini.webp'); --pos:50% 58%"></div>
+  <div class="bg__slide" style="--img:url('assets/img/bg-sala.webp'); --pos:50% 45%"></div>
+  <div class="bg__slide" style="--img:url('assets/img/bg-pasta-sarde.webp'); --pos:50% 50%"></div>
+  <div class="bg__slide" style="--img:url('assets/img/bg-facciata.webp'); --pos:50% 62%"></div>
+  <div class="bg__slide" style="--img:url('assets/img/bg-zuppa-cozze.webp'); --pos:50% 50%"></div>
+  <div class="bg__veil"></div>
+  <div class="bg__grain"></div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Maccarruni">
+    <span class="nav__mark">M</span>
+    <span class="nav__name">Maccarruni</span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#storia" data-it="La storia" data-en="Our story">La storia</a>
+    <a href="#menu" data-it="Menù" data-en="Menu">Menù</a>
+    <a href="#recensioni" data-it="Recensioni" data-en="Reviews">Recensioni</a>
+    <a href="#galleria" data-it="Galleria" data-en="Gallery">Galleria</a>
+    <a href="#contatti" data-it="Dove siamo" data-en="Find us">Dove siamo</a>
+  </nav>
+  <div class="nav__side">
+    <div class="lang" role="group" aria-label="Lingua / Language">
+      <button type="button" data-lang="it" class="is-on">IT</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn--gold btn--sm" href="tel:+390958033435" data-it="Prenota" data-en="Book">Prenota</a>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <!-- Drop a film at assets/video/hero.mp4 and it plays here in place of the sliding photos. -->
+    <video class="hero__video" id="heroVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero__grid">
+      <div class="hero__main">
+        <p class="hero__kinds reveal" style="--d:.15s"><span>Osteria</span><span>Pizzeria</span><span>Wine Bar</span><span>Catania</span></p>
+        <h1 class="hero__title reveal" style="--d:.3s"
+            data-it="Pasta fresca,<br><em>fatta in casa.</em>" data-en="Fresh pasta,<br><em>made from scratch.</em>">Pasta fresca,<br><em>fatta in casa.</em></h1>
+      </div>
+      <div class="hero__side reveal" style="--d:.6s">
+        <p class="hero__lead"
+           data-it="Mare di Sicilia, brace e buon vino, a cento metri dal Duomo."
+           data-en="Sicilian sea, the grill and good wine, a hundred metres from the Duomo.">Mare di Sicilia, brace e buon vino, a cento metri dal Duomo.</p>
+        <div class="hero__cta">
+          <a class="btn btn--gold btn--dash" href="#menu"><span data-it="Scopri" data-en="See">Scopri</span><i></i><span data-it="il menù" data-en="the menu">il menù</span></a>
+          <a class="btn btn--line btn--dash" href="tel:+390958033435"><span data-it="Prenota" data-en="Book">Prenota</span><i></i><span data-it="un tavolo" data-en="a table">un tavolo</span></a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="hero__facts reveal" style="--d:.85s">
+      <li><b data-it="Tutti i giorni" data-en="Every day">Tutti i giorni</b><span>11:30 – 02:00</span></li>
+      <li><b>4,5 / 5</b><span data-it="511 recensioni Google" data-en="511 Google reviews">511 recensioni Google</span></li>
+      <li><b data-it="Tavoli all’aperto" data-en="Outdoor tables">Tavoli all’aperto</b><span>Via S. Giuseppe al Duomo, 19</span></li>
+      <li class="hero__dots"><span class="bg-count" id="bgCount" aria-hidden="true">01 / 06</span><div class="bg-dots" id="bgDots" aria-hidden="true"></div></li>
+    </ul>
+  </section>
+
+  <section class="band" id="storia">
+    <div class="wrap story">
+      <div class="story__text">
+        <p class="eyebrow"><span class="orn"></span><span data-it="La storia" data-en="Our story">La storia</span></p>
+        <h2 data-it="Nel cuore di Catania, <em>a tavola come a casa.</em>" data-en="In the heart of Catania, <em>a table that feels like home.</em>">Nel cuore di Catania, <em>a tavola come a casa.</em></h2>
+        <p class="lede" data-it="Maccarruni nasce nel cuore di Catania, a soli 100 metri dal Duomo e dalla storica Via Etnea, per offrirti un’esperienza di gusto autentica e conviviale."
+           data-en="Maccarruni was born in the heart of Catania, just 100 metres from the Duomo and historic Via Etnea, to offer an authentic, convivial taste of Sicily.">Maccarruni nasce nel cuore di Catania, a soli 100 metri dal Duomo e dalla storica Via Etnea, per offrirti un’esperienza di gusto autentica e conviviale.</p>
+        <p data-it="Osteria, pizzeria e wine bar: il nostro locale celebra la tradizione siciliana. La pasta è fresca e fatta in casa, il pesce arriva dal mare di Sicilia, il gambero rosso da Mazara, il pistacchio da Bronte, il maialino nero dai Nebrodi."
+           data-en="Osteria, pizzeria and wine bar: our kitchen celebrates Sicilian tradition. The pasta is fresh and home-made, the fish comes from Sicilian waters, the red prawns from Mazara, the pistachio from Bronte, the black pork from the Nebrodi mountains.">Osteria, pizzeria e wine bar: il nostro locale celebra la tradizione siciliana. La pasta è fresca e fatta in casa, il pesce arriva dal mare di Sicilia, il gambero rosso da Mazara, il pistacchio da Bronte, il maialino nero dai Nebrodi.</p>
+        <ul class="pillars">
+          <li><b>01</b><span data-it="Pasta fresca fatta in casa" data-en="Fresh home-made pasta">Pasta fresca fatta in casa</span></li>
+          <li><b>02</b><span data-it="Pesce e crostacei di Sicilia" data-en="Sicilian fish and shellfish">Pesce e crostacei di Sicilia</span></li>
+          <li><b>03</b><span data-it="Cucina aperta fino a tardi" data-en="Kitchen open late">Cucina aperta fino a tardi</span></li>
+        </ul>
+      </div>
+      <div class="story__art">
+        <figure class="frame frame--tall"><img src="assets/img/facciata.webp" alt="La facciata di Maccarruni in Via San Giuseppe al Duomo, di sera" loading="lazy"></figure>
+        <figure class="frame frame--small"><img src="assets/img/sala.webp" alt="La sala di Maccarruni con la cucina a vista" loading="lazy"></figure>
+        <span class="seal" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">OSTERIA · PIZZERIA · WINE BAR · CATANIA · </textPath></text></svg><i>M</i></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--menu" id="menu">
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow"><span class="orn"></span><span data-it="La carta" data-en="The menu">La carta</span><span class="orn"></span></p>
+        <h2 data-it="Il nostro <em>menù</em>" data-en="Our <em>menu</em>">Il nostro <em>menù</em></h2>
+      </header>
+
+      <div class="tabs" id="tabs" role="tablist"></div>
+
+      <div class="menu">
+        <div class="menu__list" id="menuList" aria-live="polite"></div>
+        <aside class="fixed" id="fixedMenu"></aside>
+      </div>
+
+      <div class="menu__notes">
+        <p data-it="Comunicare al personale eventuali allergie e/o intolleranze." data-en="Please inform our staff of any allergies or intolerances.">Comunicare al personale eventuali allergie e/o intolleranze.</p>
+        <p data-it="Il pesce destinato ad essere consumato crudo, marinato o salato è stato sottoposto a trattamento di bonifica preventiva mediante congelamento con abbattitore per 24 ore a −20 °C."
+           data-en="Fish intended to be eaten raw, marinated or salted has been blast-frozen for 24 hours at −20 °C as a preventive treatment.">Il pesce destinato ad essere consumato crudo, marinato o salato è stato sottoposto a trattamento di bonifica preventiva mediante congelamento con abbattitore per 24 ore a −20 °C.</p>
+        <p data-it="* ** Prodotti che possono essere surgelati all’origine." data-en="* ** Products that may be frozen at origin.">* ** Prodotti che possono essere surgelati all’origine.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="recensioni">
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow"><span class="orn"></span><span data-it="Dicono di noi" data-en="What guests say">Dicono di noi</span><span class="orn"></span></p>
+        <h2 data-it="Le <em>recensioni</em>" data-en="The <em>reviews</em>">Le <em>recensioni</em></h2>
+      </header>
+
+      <div class="scores">
+        <div class="score">
+          <div class="score__num">4,5<small>/5</small></div>
+          <div class="stars" style="--v:4.5" aria-label="4,5 su 5"></div>
+          <div class="score__src">Google</div>
+          <div class="score__n" data-it="511 recensioni" data-en="511 reviews">511 recensioni</div>
+        </div>
+        <div class="score">
+          <div class="score__num">8,8<small>/10</small></div>
+          <div class="stars" style="--v:4.4" aria-label="8,8 su 10"></div>
+          <div class="score__src">TheFork</div>
+          <div class="score__n" data-it="623 recensioni" data-en="623 reviews">623 recensioni</div>
+        </div>
+        <div class="score">
+          <div class="score__num">648</div>
+          <div class="score__rule"></div>
+          <div class="score__src">Tripadvisor</div>
+          <div class="score__n" data-it="recensioni" data-en="reviews">recensioni</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quotes" id="quotes">
+      <div class="quotes__track">
+        <figure class="quote"><div class="stars" style="--v:5"></div><blockquote>Locale curato nei minimi dettagli, atmosfera accogliente e personale gentile.</blockquote><figcaption>Tripadvisor</figcaption></figure>
+        <figure class="quote"><div class="stars" style="--v:5"></div><blockquote>The food was fresh and made to order.</blockquote><figcaption>TheFork · 10/10</figcaption></figure>
+        <figure class="quote"><div class="stars" style="--v:5"></div><blockquote>Cucina di altissima qualità e una gentilezza fuori dal comune.</blockquote><figcaption>Tripadvisor</figcaption></figure>
+        <figure class="quote"><div class="stars" style="--v:4.5"></div><blockquote>Our last meal in Sicily… one of the best.</blockquote><figcaption>TheFork · 9/10</figcaption></figure>
+        <figure class="quote"><div class="stars" style="--v:5"></div><blockquote>Ottimo posto al centro di Catania.</blockquote><figcaption>Instagram</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="wrap center">
+      <a class="btn btn--line" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Maccarruni%20Osteria%20pizzeria%20wine%20bar%20Catania&query_place_id=ChIJh23XKgDjExMRcpaYPG7wh_U" data-it="Leggi tutte le recensioni su Google" data-en="Read all reviews on Google">Leggi tutte le recensioni su Google</a>
+    </div>
+  </section>
+
+  <section class="band band--tight" id="galleria">
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow"><span class="orn"></span><span data-it="Galleria" data-en="Gallery">Galleria</span><span class="orn"></span></p>
+        <h2 data-it="Dalla cucina <em>alla tavola</em>" data-en="From the kitchen <em>to the table</em>">Dalla cucina <em>alla tavola</em></h2>
+      </header>
+    </div>
+    <div class="reel" id="reel">
+      <div class="reel__track">
+        <figure><img src="assets/img/tagliolini.webp" alt="Tagliolini al sugo di mare" loading="lazy"><figcaption data-it="Tagliolini alla Luciana" data-en="Tagliolini alla Luciana">Tagliolini alla Luciana</figcaption></figure>
+        <figure class="wide"><img src="assets/img/crudo.webp" alt="Crudo di gamberi rossi, scampi e tartare di tonno" loading="lazy"><figcaption data-it="Crudo di mare" data-en="Raw seafood platter">Crudo di mare</figcaption></figure>
+        <figure><img src="assets/img/sala.webp" alt="La sala e la cucina a vista" loading="lazy"><figcaption data-it="La sala" data-en="The dining room">La sala</figcaption></figure>
+        <figure class="wide"><img src="assets/img/pasta-sarde.webp" alt="Maccarruni alla siciliana con sarde e finocchietto" loading="lazy"><figcaption data-it="Maccarruni alla siciliana" data-en="Maccarruni alla siciliana">Maccarruni alla siciliana</figcaption></figure>
+        <figure><img src="assets/img/facciata.webp" alt="L’ingresso del ristorante" loading="lazy"><figcaption data-it="Via San Giuseppe al Duomo" data-en="Via San Giuseppe al Duomo">Via San Giuseppe al Duomo</figcaption></figure>
+        <figure><img src="assets/img/zuppa-cozze.webp" alt="Zuppa di cozze con crostini" loading="lazy"><figcaption data-it="La nostra zuppa" data-en="Our soup">La nostra zuppa</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="contatti">
+    <div class="wrap visit">
+      <div class="visit__info">
+        <p class="eyebrow"><span class="orn"></span><span data-it="Dove siamo" data-en="Find us">Dove siamo</span></p>
+        <h2 data-it="Vi aspettiamo <em>a due passi dal Duomo.</em>" data-en="We’re waiting for you, <em>steps from the Duomo.</em>">Vi aspettiamo <em>a due passi dal Duomo.</em></h2>
+
+        <dl class="facts">
+          <div><dt data-it="Indirizzo" data-en="Address">Indirizzo</dt><dd>Via San Giuseppe al Duomo, 19<br>95124 Catania</dd></div>
+          <div><dt data-it="Orari" data-en="Hours">Orari</dt><dd><span data-it="Tutti i giorni" data-en="Every day">Tutti i giorni</span><br>11:30 – 02:00 <span class="open" id="openNow"></span></dd></div>
+          <div><dt data-it="Telefono" data-en="Phone">Telefono</dt><dd><a href="tel:+390958033435">095 803 3435</a><br><a href="tel:+393452175320">345 217 5320</a></dd></div>
+          <div><dt>Social</dt><dd><a href="https://www.instagram.com/maccarruni.catania/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/search/top?q=Maccarruni%20Osteria%20pizzeria%20wine%20bar" target="_blank" rel="noopener">Facebook</a></dd></div>
+        </dl>
+
+        <div class="visit__cta">
+          <a class="btn btn--gold" href="tel:+390958033435" data-it="Chiama per prenotare" data-en="Call to book">Chiama per prenotare</a>
+          <a class="btn btn--line" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Maccarruni%20Osteria%20pizzeria%20wine%20bar%20Catania&destination_place_id=ChIJh23XKgDjExMRcpaYPG7wh_U" data-it="Indicazioni" data-en="Directions">Indicazioni</a>
+        </div>
+      </div>
+      <div class="visit__map frame">
+        <iframe title="Mappa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Maccarruni+Osteria+pizzeria+wine+bar,+Via+S.+Giuseppe+Al+Duomo+19,+Catania&z=17&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__name">Maccarruni</div>
+  <p>Osteria · Pizzeria · Wine Bar — Via San Giuseppe al Duomo, 19 · 95124 Catania · <a href="tel:+390958033435">095 803 3435</a></p>
+  <p class="foot__small">© <span id="year"></span> Maccarruni</p>
+</footer>
+
+<a class="dock" href="tel:+390958033435"><span data-it="Prenota un tavolo" data-en="Book a table">Prenota un tavolo</span><b>095 803 3435</b></a>
+
+<script src="menu-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

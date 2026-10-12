@@ -1,0 +1,118 @@
+// Menu transcribed from the printed menu. Edit names, descriptions and prices here; the page rebuilds itself.
+// price: number in euro, a string for special pricing, or null when the printed price could not be read.
+window.MENU = [
+  {
+    id: 'primi',
+    it: 'Primi piatti', en: 'First courses',
+    note: { it: 'Tutti i nostri primi piatti vengono fatti con la pasta fresca.', en: 'All our first courses are made with fresh home-made pasta.' },
+    items: [
+      { it: 'Linguine di “Don Giovanni”', tag: { it: 'Specialità della casa', en: 'House speciality' },
+        dIt: 'Ricci di mare, gambero* rosso di Mazara, aglio, peperoncino, prezzemolo, olio', dEn: 'Sea urchins, red prawns from Mazara, garlic, chilli, parsley and oil', price: 25 },
+      { it: 'Bigoli “Maccarruni”', dIt: 'Vongole veraci, cozze, calamaro*, polpo*, gamberone*, scampi*, pomodorini, salsa di pomodoro, aglio, olio evo',
+        dEn: 'Seafood pasta: clams, mussels, squid, octopus, prawns, scampi, cherry tomatoes, tomato sauce, garlic and oil', price: 20 },
+      { it: 'Maccarruni alla norma', dIt: 'Melanzane fritte, pomodoro, ricotta salata, basilico', dEn: 'Fried aubergines, tomato, salted ricotta and basil', price: 12 },
+      { it: 'Maccarruni alla siciliana', dIt: 'Sardine, finocchietto selvatico, pinoli, uva sultanina, cipolla e mollica di grano tostata, aromatizzata con acciuga',
+        dEn: 'Sardines, wild fennel, pine nuts, raisins, onion and toasted breadcrumbs', price: 13 },
+      { it: 'Maccarruni e polpette', dIt: 'Ragù di manzo, polpette di manzo al sugo di pomodoro', dEn: 'Beef ragù and beef meatballs in tomato sauce', price: 13 },
+      { it: 'Linguine ai ricci di mare', dIt: 'Polpa di ricci, aglio, prezzemolo', dEn: 'Sea urchins, garlic and parsley', price: 20 },
+      { it: 'Spaghetti alle vongole veraci', dIt: 'Vongole, aglio, peperoncino, prezzemolo, olio evo', dEn: 'Clams, chilli, parsley and oil', price: 17 },
+      { it: 'Tagliolini agli scampi*', dIt: 'Scampi, pomodorini, aglio, peperoncino, prezzemolo, olio evo', dEn: 'Scampi, cherry tomatoes, garlic, chilli, parsley and oil', price: 16 },
+      { it: 'Tagliolini alla Luciana', dIt: 'Polpo*, salsa di pomodoro, cipolla, peperoncino rosso, prezzemolo, olio evo', dEn: 'Octopus, tomato sauce, onion, red chilli, parsley and oil', price: 15 },
+      { it: 'Spaghetti al nero di seppia', dIt: 'Nero di seppia, seppia, cipolla, pomodoro, pepe nero, vino bianco, olio evo', dEn: 'Cuttlefish ink, cuttlefish, onion, tomato, black pepper and white wine', price: 15 },
+      { it: 'Risotto alla marinara', dIt: 'Gamberetti, vongole, cozze, polpo, aglio, vino bianco, pepe nero, olio evo', dEn: 'Shrimps, clams, mussels, octopus, garlic, white wine, black pepper and oil', price: 15 },
+      { it: 'Paccheri con spada* e melanzane', dIt: 'Pesce spada, melanzane, pomodoro, cipolla, olio evo', dEn: 'Swordfish, aubergines, tomato, onion and oil', price: 13 },
+      { it: 'Ravioloni agli scampi*', dIt: 'Ravioloni ripieni di scampi e ciliegino', dEn: 'Large ravioli stuffed with scampi and cherry tomatoes', price: 16 },
+      { it: 'Ravioloni al pistacchio', dIt: 'Ravioloni ripieni di ricotta di pecora e pistacchi di Sicilia', dEn: 'Large ravioli stuffed with sheep ricotta and Sicilian pistachio', price: 16 },
+      { it: 'Ravioloni al pesce spada*', dIt: 'Ripieni di pesce spada, ciliegino e lime', dEn: 'Stuffed with swordfish, cherry tomatoes and lime', price: 16 },
+      { it: 'Spaghetti cacio e pepe al tartufo', dIt: 'Cacio ragusano DOP, pepe nero, tartufo', dEn: 'Ragusano DOP cheese, black pepper and truffle', price: 16 },
+      { it: 'Spaghetti alla carbonara', dIt: 'Guanciale di maialino nero dei Nebrodi, tuorlo d’uovo, pecorino romano, pepe nero', dEn: 'Nebrodi black pork cheek, egg yolk, pecorino romano and black pepper', price: 12 },
+      { it: 'Lasagne al ragù di manzo', dIt: 'Al forno, con ragù di manzo al pomodoro', dEn: 'Oven-baked lasagna with beef ragù in tomato sauce', price: 12 },
+      { it: 'Tagliolini all’astice con frutti di mare', tag: { it: 'Min. 2 persone', en: 'Min. 2 people' },
+        dIt: 'Astice, vongole, cozze, prezzemolo, olio evo', dEn: 'Rock lobster, clams, mussels, parsley and oil', price: 70 },
+      { it: 'Linguine all’aragosta*', tag: { it: 'Min. 2 porzioni', en: 'Min. 2 portions' },
+        dIt: 'Aragosta, ciliegino, aglio, prezzemolo, olio evo', dEn: 'Lobster, cherry tomatoes, garlic, parsley and oil', price: 60 },
+    ],
+  },
+  {
+    id: 'zuppe',
+    it: 'Zuppe', en: 'Soups',
+    items: [
+      { it: 'Zuppa di ceci', dEn: 'Chickpea soup', price: 10 },
+      { it: 'Zuppa di lenticchie', dEn: 'Lentil soup', price: 10 },
+      { it: 'Minestrone', dEn: 'Vegetable soup', price: 10 },
+    ],
+  },
+  {
+    id: 'pesce',
+    it: 'Secondi di pesce', en: 'Fish & seafood',
+    items: [
+      { it: 'Fritto misto di pesce', dIt: 'Gamberoni* e calamari*, impanati con la farina di semola', dEn: 'Mixed fried prawns and squid, coated with semolina flour', price: 16 },
+      { it: 'Salmone arrosto', dIt: 'Condito con prezzemolo, aglio, olio evo', dEn: 'Grilled salmon dressed with garlic, parsley and oil', price: 16 },
+      { it: 'Calamari* fritti', dIt: 'Farina di semola, olio di semi di girasole', dEn: 'Fried squid in semolina flour', price: 15 },
+      { it: 'Gamberoni* arrosto', dIt: 'Conditi con aglio, prezzemolo, olio evo', dEn: 'Grilled prawns dressed with garlic, parsley and oil', price: 15 },
+      { it: 'Tonno* rosso alla griglia', dIt: 'Condito con aglio, prezzemolo, olio evo', dEn: 'Grilled red tuna dressed with parsley, garlic and oil', price: 14 },
+      { it: 'Polpo* alla Luciana', dIt: 'Polpo, pomodoro, cipolla', dEn: 'Octopus cooked with tomato and onion', price: 14 },
+      { it: 'Scamponi* · Aragosta* · Gambero di Mazara*', tag: { it: 'Crostacei', en: 'Crustaceans' },
+        dIt: 'Al peso, secondo disponibilità', dEn: 'Large scampi, lobster, red prawns from Mazara — by weight', price: '€ 120 / kg' },
+    ],
+  },
+  {
+    id: 'carne',
+    it: 'Secondi di carne', en: 'Meat',
+    items: [
+      { it: 'Filetto di vitello al Nero d’Avola', dIt: 'Con cipolla croccante in agrodolce', dEn: 'Veal fillet in Nero d’Avola wine with crunchy sweet-and-sour onion', price: 20 },
+      { it: 'Filetto di vitello ai funghi porcini*', dEn: 'Veal fillet with porcini mushrooms', price: 20 },
+      { it: 'Filetto di vitello alla griglia', dEn: 'Grilled veal fillet', price: null },
+      { it: 'Costolette di agnello* alla griglia', dEn: 'Grilled lamb chops', price: 16 },
+      { it: 'Grigliata mista di carne', dIt: 'Costine di maiale, salsiccia di maiale, polpetta di vitello, cipollata', dEn: 'Pork ribs, pork sausage, veal meatball, bacon-wrapped spring onion', price: 14 },
+      { it: 'Grigliata mista di carne di cavallo', dIt: '2 polpette, 1 bistecca', dEn: 'Horse meat grill: 2 meatballs and 1 steak', price: 14 },
+    ],
+  },
+  {
+    id: 'contorni',
+    it: 'Contorni', en: 'Side dishes',
+    items: [
+      { it: 'Misto di verdure alla griglia', dEn: 'Mixed grilled vegetables', price: 9 },
+      { it: 'Insalata della nonna', dIt: 'Pomodoro, cipolla calabrese, ricotta salata', dEn: 'Tomato salad with onion and salted ricotta', price: 7 },
+      { it: 'Insalata mista', dEn: 'Mixed salad', price: 6 },
+      { it: 'Patatine fritte**', dEn: 'French fries', price: 5 },
+    ],
+  },
+  {
+    id: 'dolci',
+    it: 'Dolci', en: 'Desserts',
+    items: [
+      { it: 'Mousse di cioccolato con cuore di arancio', dEn: 'Chocolate mousse with an orange heart', price: 6 },
+      { it: 'Tiramisù', price: 6 },
+      { it: 'Profiterol', price: 6 },
+    ],
+  },
+  {
+    id: 'bevande',
+    it: 'Bevande', en: 'Drinks',
+    note: { it: 'Carta dei vini e pizze dal forno: chiedi in sala.', en: 'Wine list and oven-baked pizzas: ask our staff.' },
+    items: [
+      { it: 'Acqua minerale naturale 1 lt', en: 'Still mineral water 1 l', price: 3 },
+      { it: 'Acqua minerale frizzante 1 lt', en: 'Sparkling mineral water 1 l', price: 3 },
+      { it: 'Acqua Lete 0,75 cl', en: 'Lete mineral water 0.75 l', price: 3 },
+      { it: 'Coca-Cola, Fanta, Sprite 33 cl', price: 3 },
+      { it: 'Coca-Cola 1 lt', price: 6 },
+      { it: 'Birra Castello 33 cl', en: 'Castello beer 33 cl', price: 3.5 },
+      { it: 'Birra Castello 0,75 cl', en: 'Castello beer 0.75 l', price: 5 },
+      { it: 'Succhi di frutta', en: 'Fruit juice', price: 3 },
+    ],
+  },
+];
+
+window.FIXED_MENU = {
+  price: 22,
+  title: { it: 'Menù a prezzo fisso', en: 'Fixed-price menu' },
+  sub: { it: 'A base di carne', en: 'With meat' },
+  courses: [
+    { k: { it: 'Antipasti', en: 'Starters' }, v: { it: 'Caponata, parmigiana, bruschetta, crocchette di patate', en: 'Caponata, parmigiana, bruschetta, potato croquettes' } },
+    { k: { it: 'Primo a scelta', en: 'First course of your choice' }, v: { it: 'Maccarruni alla norma oppure gnocchi al pistacchio di Bronte', en: 'Maccarruni alla norma or gnocchi with Bronte pistachio cream' } },
+    { k: { it: 'Secondo', en: 'Main course' }, v: { it: 'Grigliata mista di carne servita con insalata mista', en: 'Mixed grilled meat served with mixed salad' } },
+    { k: { it: 'Dolce della casa', en: 'House dessert' }, v: { it: 'Profiterol', en: 'Profiterole' } },
+  ],
+  foot: { it: 'Bevande e coperto sono esclusi.', en: 'Drinks and cover charge are not included.' },
+};
